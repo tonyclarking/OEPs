@@ -117,6 +117,14 @@ public struct State
 The transferFromMulti method is used for a withdraw workflow, allowing multiple <code>Spender</code> to withdraw <code>Value</code> of Crypto Item <code>TokenId</code>  from <code>From</code> account to <code>To</code> account.
 The Parameters <code>Spender</code> <code>From</code> and <code>To</code> SHOULD be 20-byte addresses. If not, this method SHOULD throw an exception.
 
+====compound====
+<pre>
+public static bool compound(byte[] address)
+
+</pre>
+The compound method is used to compound different types of tokens in the account of <code>address</code> into a new type of token. It requires the <code>address</code> account has at least 1 token for all type of tokens except the new type token. When the compound method is invoked successfully, the tokens for compounding will disappear and the new tokens will be granted to <code>address</code> with the new token totalSupply increasing.
+The Parameters <code>address</code> SHOULD be 20-byte addresses. If not, this method SHOULD throw an exception.
+
 ==Event==
 ====transfer====
 <pre>
