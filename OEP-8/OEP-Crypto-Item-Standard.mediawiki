@@ -117,6 +117,8 @@ public struct State
 The transferFromMulti method is used for a withdraw workflow, allowing multiple <code>Spender</code> to withdraw <code>Value</code> of Crypto Item <code>TokenId</code>  from <code>From</code> account to <code>To</code> account.
 The Parameters <code>Spender</code> <code>From</code> and <code>To</code> SHOULD be 20-byte addresses. If not, this method SHOULD throw an exception.
 
+==Optional==
+===Method===
 ====compound====
 <pre>
 public static bool compound(byte[] address)
